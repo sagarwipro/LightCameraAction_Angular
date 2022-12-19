@@ -1,0 +1,94 @@
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container" *ngIf="movie">
+      <form (ngSubmit)="updateMovie()">
+        <h1>Update Movie</h1>
+        <br />
+        <br />
+        <span class="subtitle">ID:</span>
+        <br />
+        <input
+          type="text"
+          name="id"
+          value="{{ movie.id }}"
+          [(ngModel)]="id"
+          readonly
+        />
+        <br />
+        <span class="subtitle">Title:</span>
+        <br />
+        <input
+          type="text"
+          name="name"
+          value="{{ movie.name }}"
+          [(ngModel)]="name"
+        />
+        <br />
+        <span class="subtitle">Description:</span>
+        <br />
+        <input
+          type="text"
+          name="description"
+          value="{{ movie.description }}"
+          [(ngModel)]="description"
+        />
+        <br />
+        <span class="subtitle">Details:</span>
+        <br />
+        <input
+          type="text"
+          name="details"
+          value="{{ movie.details }}"
+          [(ngModel)]="details"
+        />
+        <br />
+        <span class="subtitle">Image URL:</span>
+        <br />
+        <input
+          type="url"
+          name="imageUrl"
+          value="{{ movie.imageUrl }}"
+          [(ngModel)]="imageUrl"
+        />
+        <br />
+        <span class="subtitle">Watch URL:</span>
+        <br />
+        <input
+          type="url"
+          name="watchLink"
+          value="{{ movie.watchLink }}"
+          [(ngModel)]="watchLink"
+        />
+        <br />
+        <span class="subtitle">Duration:</span>
+        <br />
+        <input
+          type="number"
+          name="duration"
+          value="{{ movie.duration }}"
+          [(ngModel)]="duration"
+        />
+        <br />
+        <span class="subtitle">Release Year:</span>
+        <br />
+        <input
+          type="number"
+          name="releaseYear"
+          value="{{ movie.releaseYear }}"
+          [(ngModel)]="releaseYear"
+        />
+        <br />
+        <span class="subtitle">Type:</span>
+        <br />
+        <input
+          type="text"
+          name="type"
+          value="{{ movie.type }}"
+          [(ngModel)]="type"
+        />
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</div>

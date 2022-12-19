@@ -1,0 +1,20 @@
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container">
+      <form (ngSubmit)="addCast()">
+        <h1>Add Cast</h1>
+        <br />
+        <br />
+        <span class="subtitle">Name:</span>
+        <br />
+        <input type="text" name="name" value="" [(ngModel)]="name" />
+        <br />
+        <span class="subtitle">Image URL:</span>
+        <br />
+        <input type="url" name="imageUrl" value="" [(ngModel)]="imageUrl" />
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</div>

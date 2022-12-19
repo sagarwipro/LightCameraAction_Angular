@@ -1,0 +1,36 @@
+<div>
+  <input
+    id="newComment"
+    type="text"
+    class="mainComment"
+    placeholder="Add a comment"
+  />
+  <button class="btn" (click)="addComment($event)">Comment</button>
+
+  <div *ngFor="let c of comments">
+    <div id="reply" class="vision">
+      <input
+        id="replyCmnt"
+        type="text"
+        class="replyComment"
+        placeholder="Reply"
+      />
+      <button class="button" (click)="submitReply(c.id)">Submit</button>
+    </div>
+    <div class="container">
+      <p class="cmnt" aria-readonly="true">{{ c.comment }}</p>
+      <button class="button" (click)="addReply(c.id)">reply</button>
+    </div>
+
+    <div *ngFor="let sc of subComments">
+      <div *ngIf="sc.parentId == c.id">
+        <div id="{{ c.id }}">
+          <p class="commentsText" aria-readonly="true">
+            {{ sc.comment }}
+          </p>
+        </div>
+        <div class="space">s</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+  padding: 10px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3%;
+}
+
+.picDisplay{
+  background-color: black;
+  width: 100%;
+  height:60vh;
+  overflow-x: hidden;
+}
+
+.card_title{
+  font-size: 20px;
+  color: yellowgreen;
+}
+
+.card_text{
+  font-size: 17px;
+  color: yellowgreen;
+}
+
+.card_content{
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  font-size: 8px;
+  border: 1px solid yellowgreen;
+  color: yellowgreen;
+  overflow-x: hidden;
+ }
+ 
+
+.photo > img {
+  object-fit:contain;
+  width: 100%;
+  height: 26vh;
+}

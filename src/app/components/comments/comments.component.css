@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.container{
+    margin-left: 90px;
+    text-align: center;
+    display: flex;
+}
+.mainComment{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 3vh;
+    width: 80%;
+    border-width: 0;
+    border-bottom: 2px solid greenyellow;
+    background: transparent;
+    content: "Add Comment";
+    color: yellowgreen !important;
+    content: "Add a comment";
+    font-size: large;
+    outline: none;
+}
+
+.cmnt{
+    margin-left: 20px;
+    height: 3vh;
+    width: 70%;
+    border-width: 0;
+    border-left:  2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    background: transparent;
+    content: "Add Comment";
+    color: yellowgreen;
+    content: "Add a comment";
+    font-size: large;
+    outline: none;
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+
+.replyComment{
+    overflow-x: hidden;
+    border-radius: 10px;
+    margin-left: 100px;
+    height: 3vh;
+    width: 60%;
+    border-width: 0;
+    border-left:  2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    background: transparent;
+    content: "Add Comment";
+    content: "Add a comment";
+    font-size: large;
+    outline: none;
+    color: red;
+}
+
+::placeholder {
+    color: red;
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+.commentLogo{
+    width: 50px;
+    height: 45px;
+    border-radius:1000px;
+    vertical-align: middle;
+}
+
+.vision{
+display: none;
+}
+
+.btn{
+    background-color: yellowgreen;
+    border-radius: 15px;
+    width: 70px;
+    height: 4vh;
+}
+
+.commentsText{
+    margin-left: 240px;
+    height: 3vh;
+    width: 40%;
+    border-width: 0;
+    border-left: 2px solid greenyellow;
+    text-align: center;
+    border-bottom: 2px solid greenyellow;
+    background: transparent;
+    content: "Add Comment";
+    color: yellowgreen;
+    content: "Add a comment";
+    font-size: large;
+    outline: none;
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+
+.space{
+    margin-top: 20px;
+}
+
+.button{
+    background-color: yellowgreen;
+    border-radius: 15px;
+    width: 70px;
+    height: 4vh;
+    margin-top: 10px;
+    margin-left: 5px;
+}

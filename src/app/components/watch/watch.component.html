@@ -1,0 +1,38 @@
+<div class="grid-container">
+  <div class="grid-item picDisplay">
+    <div class="card_content">
+      <h1 class="card_title">{{ movie.name }}</h1>
+      <h2 class="card_text">{{ movie.description }}</h2>
+      <h3 class="card_text">
+        Type : <span>{{ movie.type }}</span>
+      </h3>
+      <p class="card_text">
+        {{ movie.details }}
+      </p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <iframe
+      width="500"
+      height="500"
+      [src]="trustedDashboardUrl"
+      title="The Wild - Clocks - Coldplay (Finding Ryan) HD 1080p"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="grid-item picDisplay">
+    <h1 class="card_text">CASTS</h1>
+
+    <div class="container" *ngFor="let c of casts">
+      <div class="photo">
+        <img src="{{ c.imageUrl }}" />
+      </div>
+      <div class="text">
+        <h1>{{ c.name }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<app-comments currentUserId="1"></app-comments>

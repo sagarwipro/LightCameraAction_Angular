@@ -1,0 +1,74 @@
+<div class="grid">
+  <ul class="cards" *ngFor="let movie of movies">
+    <li class="cards_item">
+      <div class="card">
+        <a [routerLink]="['/watchvideo', movie.watchLink, movie.id]">
+          <div class="card_image"><img src="{{ movie.imageUrl }}" /></div>
+          <div class="card_content">
+            <h1 class="card_title">{{ movie.name }}</h1>
+            <h2 class="card_text">{{ movie.description }}</h2>
+            <h3 class="card_text">
+              Type : <span>{{ movie.type }}</span>
+            </h3>
+          </div>
+        </a>
+        <div class="rating">
+          <h2 class="raatingHeaad">Rating</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <div class="card_content">
+          <div class="container">
+            <button
+              id="{{ movie.id }}"
+              name="castButton"
+              class="btn card_btn"
+              (click)="addCast($event)"
+            >
+              ADD CAST
+            </button>
+            <button
+              id="{{ movie.id }}"
+              class="btn card_btn"
+              (click)="editMovie($event)"
+            >
+              Edit
+            </button>
+          </div>
+          <input
+            value="Search"
+            type="search"
+            name="searchbox"
+            id="k{{ movie.id }}"
+            style="visibility: hidden"
+            (change)="getData($event)"
+          />
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="suggested-movies">
+  <h1>
+    <u class="line">Sorted Movies by </u
+    ><span>
+      &nbsp;
+      <select id="type" (change)="selectTypeChange($event)">
+        <option value="select">Select</option>
+        <option value="genre">Genre</option>
+        <option value="cast">Cast</option>
+        <option value="ratings">Ratings</option>
+      </select>
+    </span>
+  </h1>
+</div>
+<article *ngIf="messageSorting" class="sortingMessage">
+  {{ messageSorting }}
+</article>
+<article *ngFor="let m of suggestedMovies">
+  <img class="image" src="{{ m.imageUrl }}" />
+</article>

@@ -1,0 +1,26 @@
+<div class="grid">
+  <ul class="cards" *ngFor="let cast of casts">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="{{ cast.imageUrl }}" /></div>
+        <div class="card_content">
+          <h1 class="card_title">{{ cast.name }}</h1>
+          <table class="card_text">
+            <tr>
+              <td *ngFor="let movie of cast.movieCastedList">
+                &nbsp;&nbsp;{{ movie.name }} &nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+          </table>
+          <button
+            id="{{ cast.id }}"
+            class="btn card_btn"
+            (click)="editCast($event)"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

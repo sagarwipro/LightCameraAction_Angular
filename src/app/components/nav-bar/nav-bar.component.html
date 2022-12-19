@@ -1,0 +1,28 @@
+<div class="nav-bar">
+  <img
+    class="logo"
+    src="https://cdn.freebiesupply.com/logos/large/2x/lca-logo-png-transparent.png"
+  />
+  <ul class="nav-list">
+    <li class="nav-item"><a href="casts">Casts</a></li>
+    <li class="nav-item"><a href="app-add-cast">Add Cast</a></li>
+    <li class="nav-item"><a href="movies">Movies</a></li>
+    <li class="nav-item"><a href="add-movie">Add Movie</a></li>
+    <li class="nav-item"><a href="app-subscription">Subscribers</a></li>
+  </ul>
+  <div class="dropdown">
+    <input
+      class="searchbar"
+      type="text"
+      placeholder="Search for movies"
+      [ngModel]="input"
+      (ngModelChange)="modelChangeFn($event)"
+    />
+    <div id="myTable" class="dropdown-content" *ngFor="let m of selectedMovie">
+      <a [routerLink]="['app-update-movie', m.id]"
+        ><img src="{{ m.imageUrl }}"
+      /></a>
+      <a [routerLink]="['/app-update-movie', m.id]">{{ m.name }}</a>
+    </div>
+  </div>
+</div>

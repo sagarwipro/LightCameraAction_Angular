@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Trirong");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-image: url("../assets/homeImage.jpeg");
+    background-position: center;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}

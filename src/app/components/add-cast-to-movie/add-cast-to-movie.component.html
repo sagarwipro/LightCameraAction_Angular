@@ -1,0 +1,56 @@
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container" *ngIf="movie">
+      <form (ngSubmit)="updateMovie()">
+        <h1>Add Cast To Movie</h1>
+        <br />
+        <br />
+        <span class="subtitle">ID:</span>
+        <br />
+        <input
+          type="text"
+          name="id"
+          value="{{ movie.id }}"
+          [(ngModel)]="id"
+          readonly
+        />
+        <br />
+        <span class="subtitle">Title:</span>
+        <br />
+        <input
+          type="text"
+          name="name"
+          value="{{ movie.name }}"
+          [(ngModel)]="name"
+        />
+        <br />
+        <span class="subtitle">Description:</span>
+        <br />
+        <input
+          type="text"
+          name="description"
+          value="{{ movie.description }}"
+          [(ngModel)]="description"
+        />
+        <br /><br />
+        <span class="subtitle">Image URL:</span>
+        <br />
+        <input
+          type="url"
+          name="imageUrl"
+          value="{{ movie.imageUrl }}"
+          [(ngModel)]="imageUrl"
+        />
+        <br /><br />
+        <div *ngFor="let c of castList; let index = index">
+          <input type="checkbox" name="{{ c.id }}" value="{{ c.id }}" />
+          <label for="{{ c.id }}">{{ c.name }}</label>
+          &nbsp; <label for="{{ c.id }}"> {{ c.imageUrl }}</label
+          ><br />
+        </div>
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</div>

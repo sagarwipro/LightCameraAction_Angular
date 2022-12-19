@@ -1,0 +1,40 @@
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container" *ngIf="cast">
+      <form (ngSubmit)="updateCast()">
+        <h1>Update Cast</h1>
+        <br />
+        <br />
+        <span class="subtitle">ID:</span>
+        <br />
+        <input
+          type="text"
+          name="id"
+          value="{{ cast.id }}"
+          [(ngModel)]="id"
+          readonly
+        />
+        <br />
+        <span class="subtitle">Name:</span>
+        <br />
+        <input
+          type="text"
+          name="name"
+          value="{{ cast.name }}"
+          [(ngModel)]="name"
+        />
+        <br />
+        <span class="subtitle">Image URL:</span>
+        <br />
+        <input
+          type="url"
+          name="imageUrl"
+          value="{{ cast.imageUrl }}"
+          [(ngModel)]="imageUrl"
+        />
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</div>

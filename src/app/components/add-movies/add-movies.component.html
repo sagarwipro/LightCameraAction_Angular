@@ -1,0 +1,55 @@
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container">
+      <form (ngSubmit)="addMovie()">
+        <h1>Add Movie</h1>
+        <br />
+        <br />
+        <span class="subtitle">Title:</span>
+        <br />
+        <input type="text" name="name" value="" [(ngModel)]="name" />
+        <br />
+        <span class="subtitle">Description:</span>
+        <br />
+        <input
+          type="text"
+          name="description"
+          value=""
+          [(ngModel)]="description"
+        />
+        <br />
+        <br />
+        <span class="subtitle">Details:</span>
+        <br />
+        <input type="text" name="details" value="" [(ngModel)]="details" />
+        <br />
+        <span class="subtitle">Image URL:</span>
+        <br />
+        <input type="url" name="imageUrl" value="" [(ngModel)]="imageUrl" />
+        <br />
+        <span class="subtitle">Watch Link:</span>
+        <br />
+        <input type="text" name="type" value="" [(ngModel)]="watchLink" />
+        <br />
+        <span class="subtitle">Duration:</span>
+        <br />
+        <input type="number" name="duration" value="" [(ngModel)]="duration" />
+        <br />
+        <span class="subtitle">Release Year:</span>
+        <br />
+        <input
+          type="number"
+          name="releaseYear"
+          value=""
+          [(ngModel)]="releaseYear"
+        />
+        <br />
+        <span class="subtitle">Type:</span>
+        <br />
+        <input type="text" name="type" value="" [(ngModel)]="type" />
+        <br /><br />
+        <input type="submit" value="SUBMIT" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+</div>

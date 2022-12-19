@@ -1,0 +1,162 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.raatingHeaad{
+  color: yellowgreen;
+}
+.checked {
+  top: 0;
+  margin-top: 0% !important;
+  color: yellowgreen;
+}
+
+h1, h2, h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  height: 40vh;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: yellowgreen;
+}
+
+
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+.card {
+  background-color: black;
+  width: 128%;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  padding: 2px;
+  height: 64vh;
+  overflow-x: hidden;
+}
+
+.card:hover{
+padding: 4px;
+transition: 0.3s;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: black;
+}
+
+.card_title {
+  color: yellowgreen;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-top: 15%;
+}
+
+.card_text {
+  color: lightgreen;
+  font-size: 0.600rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 5%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 2fr 1fr;
+  color: yellowgreen;
+ }
+ 
+a{
+  text-decoration: none;
+}
+
+div > h1{
+  border-top: 2px solid yellowgreen;
+  border-bottom: 2px solid yellowgreen;
+}
+
+.line{
+  color: yellowgreen;
+  text-decoration-line: underline;
+  text-decoration-style:double;
+  text-decoration-color: yellowgreen
+}
+
+select{
+  background-color: black;
+  width: 10%;
+  color: yellowgreen;
+  font-size: large;
+}
+
+.suggested-movies{
+  margin-bottom: 20px;
+}
+
+
+article {
+  width: 25%;
+  position: relative;
+  float: left;
+  text-align: center;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  border: dotted 1px yellowgreen;
+  margin-bottom: 20px;
+}
+
+.sortingMessage{
+  width: 100%;
+  color: yellowgreen;
+  font-size: xx-large;
+  text-align: center;
+  background-color: black;
+}
